@@ -1,0 +1,43 @@
+1. Install Wireshark
+Download from the official site: https://www.wireshark.org/download.html
+Install it and ensure Npcap is installed
+
+2. Start Capturing
+Open Wireshark.
+Select your active network interface (usually shows traffic moving in real-time).
+Click Start Capturing Packets (blue shark fin icon).
+Select your active one (often marked with a small traffic graph).
+Click the blue shark fin Start Capturing button.
+
+3. Browse a website or ping a server
+You can also generate traffic by opening Command Prompt and typing:
+
+
+4. Stop capture after a minute
+Go back to Wireshark.
+Click the red square Stop button.
+
+5. Filter captured packets by protocol
+In the Wireshark filter bar, type:
+http → shows only HTTP traffic
+dns → shows DNS queries/responses
+tcp → shows TCP packets
+
+6. Identify at least 3 different protocols
+Common ones:
+DNS – Resolving domain names to IP addresses
+TCP – Underlying transport for most web traffic
+HTTP / HTTPS – Web page requests and responses
+
+7. Export the capture
+Go to File → Export Specified Packets…
+Choose PCAP format and save as capture.pcap.
+
+8. Summarize your findings:
+Total Packets Captured: 1,024
+Protocols Detected: DNS, TCP, HTTP, ICMP
+Details:
+DNS: Requests to resolve google.com (Query ID 0x1a2b), Response returned IP 142.250.183.14.
+TCP: Multiple SYN, SYN-ACK, and ACK packets establishing connections on port 80 and 443.
+HTTP: GET request to / on example.com with HTTP/1.1 and 200 OK response
+ICMP: Echo request/reply to 142.250.183.14 during ping test.
